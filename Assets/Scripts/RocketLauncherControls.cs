@@ -29,6 +29,14 @@ public class RocketLauncherControls : MonoBehaviour
 
     private void LaunchRocket()
     {
-        Instantiate(_rocketPrefab, this.transform.position, this.transform.rotation);
+        GameObject newRocketGO = Instantiate(_rocketPrefab, this.transform.position, this.transform.rotation);
+        if(newRocketGO.TryGetComponent<Rocket>(out var newRocket))
+        {
+            newRocket.Init(this.transform.up);
+        }
+        else
+        {
+            Debug.LogError("MISSING ROCKET COMPONENT");
+        }
     }
 }
