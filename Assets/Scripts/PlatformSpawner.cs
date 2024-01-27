@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 [RequireComponent(typeof(SpriteRenderer))]
 public class PlatformSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject platformPrefab;
+    [SerializeField] private GameObject[] platformPrefabs;
     [SerializeField, Range(0f, 1f)] private float chanceToMove;
     [Space]
     [SerializeField] private float minMoveSpeed = 2;
@@ -29,7 +29,9 @@ public class PlatformSpawner : MonoBehaviour
 
         var spawnPostion = new Vector3(spawnX, spawnY, 0);
 
-        var platform = Instantiate(platformPrefab, spawnPostion, Quaternion.identity);
+        var index = Random.Range(0, platformPrefabs.Length);
+
+        var platform = Instantiate(platformPrefabs[index], spawnPostion, Quaternion.identity);
 
         var mover = platform.GetComponent<PlatformMover>();
         mover.SetSpeed(Random.Range(minMoveSpeed, maxMoveSpeed));
@@ -39,8 +41,8 @@ public class PlatformSpawner : MonoBehaviour
             mover.isActive = true;
         }
 
-        var scaler = platform.GetComponent<PlatformScaler>();
-        scaler.SetScale(Random.Range(minLength, maxLength));
+        //var scaler = platform.GetComponent<PlatformScaler>();
+        //scaler.SetScale(Random.Range(minLength, maxLength));
 
     }
 }

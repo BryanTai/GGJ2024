@@ -13,7 +13,6 @@ public class PlatformMover : MonoBehaviour
 
     private new Rigidbody2D rigidbody;
 
-    // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -40,6 +39,6 @@ public class PlatformMover : MonoBehaviour
 
     public void SetSpeed(float newSpeed)
     {
-        moveSpeed = newSpeed;
+        moveSpeed = newSpeed;   
     }
 }
