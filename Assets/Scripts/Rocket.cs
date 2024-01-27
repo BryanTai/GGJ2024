@@ -17,9 +17,10 @@ public class Rocket : MonoBehaviour
         }
     }
 
-    public void Init(Vector3 rocketDirection)
+    public void LaunchRocket(Vector3 rocketDirection)
     {
-        _rigidBody.velocity = rocketDirection * _rocketSpeed * -1;
+        Vector2 rocketForceVector = rocketDirection * _rocketSpeed * -1;
+        _rigidBody.AddForce(rocketForceVector);
     }
 
     private void Update()
