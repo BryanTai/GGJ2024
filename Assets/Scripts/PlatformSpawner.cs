@@ -8,7 +8,9 @@ public class PlatformSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject platformPrefab;
     [SerializeField, Range(0f, 1f)] private float chanceToMove;
-    [SerializeField] private float moveSpeed = 5;
+    [Space]
+    [SerializeField] private float minMoveSpeed = 2;
+    [SerializeField] private float maxMoveSpeed = 8;
     [Space]
     [SerializeField] private float minLength = 2;
     [SerializeField] private float maxLength = 8;
@@ -30,7 +32,7 @@ public class PlatformSpawner : MonoBehaviour
         var platform = Instantiate(platformPrefab, spawnPostion, Quaternion.identity);
 
         var mover = platform.GetComponent<PlatformMover>();
-        mover.SetSpeed(moveSpeed);
+        mover.SetSpeed(Random.Range(minMoveSpeed, maxMoveSpeed));
 
         if(Random.Range(0f, 1f) < chanceToMove)
         {
