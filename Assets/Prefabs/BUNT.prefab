@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 280973155394163281}
   - component: {fileID: 2605272112665551657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: debug direction arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 8156405983439831014}
   - component: {fileID: 8773426838126984628}
   - component: {fileID: 4549915759324276299}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RocketLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a90bdee15939b4eb4d13fea5f44cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rocketPrefab: {fileID: 5768335455746830219, guid: 68c71787aa4186648b91734c803bb3e2, type: 3}
 --- !u!1 &4507715771884314907
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +196,7 @@ GameObject:
   - component: {fileID: 8304915014474497572}
   - component: {fileID: 8744793463834337557}
   - component: {fileID: 4203272136764105357}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BUNT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
