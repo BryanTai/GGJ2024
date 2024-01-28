@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 878088122}
   - component: {fileID: 878088125}
   - component: {fileID: 878088124}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 1888987882}
   - component: {fileID: 1888987885}
   - component: {fileID: 1888987884}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
