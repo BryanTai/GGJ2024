@@ -5,6 +5,8 @@ public class Rocket : MonoBehaviour
 {
     [SerializeField] private float _rocketSpeed;
     [SerializeField] private float _secondsToLive;
+    [SerializeField] private float _explosionRadius;
+    [SerializeField] private float _explosionPower;
     [SerializeField] private Rigidbody2D _rigidBody;
 
     private float _secondsAlive;
@@ -40,8 +42,21 @@ public class Rocket : MonoBehaviour
         Explode();
     }
 
+    
+
     private void Explode()
     {
+
+        Vector3 explosionPosition = this.transform.position;
+        Collider2D buntCollider = Physics2D.OverlapCircle(explosionPosition, _explosionRadius, LayerMask.GetMask("Bunt"));
+
+        if(buntCollider != null)
+        {
+            Rigidbody2D buntRigidbody = buntCollider.GetComponent<Rigidbody2D>();
+            buntRigidbody.AddExplosionForce(_explosionPower, explosionPosition, _explosionRadius);
+        }
+        
+
         Debug.Log("KABOOM!");
         Destroy(this.gameObject);
     }
