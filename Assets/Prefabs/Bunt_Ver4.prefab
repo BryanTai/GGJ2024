@@ -813,9 +813,7 @@ MonoBehaviour:
   _groundTrigger: {fileID: 873605621073379061}
   _speed: 3
   _jumpForce: 5000
-  flyingFace: {fileID: 647893516091098366, guid: 2777c87c2dd8fd6468dbac6189504e10, type: 3}
-  groundedFace: {fileID: -2474847429746752371, guid: 2777c87c2dd8fd6468dbac6189504e10, type: 3}
-  faceRenderer: {fileID: 5146249616020772787}
+  _verticalSpeedLimitForJump: 3
 --- !u!1 &2713330398962607473
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,6 +825,7 @@ GameObject:
   - component: {fileID: 7173697264071254511}
   - component: {fileID: 5146249616020772787}
   - component: {fileID: 1389531143580514153}
+  - component: {fileID: 9196190247126558097}
   m_Layer: 6
   m_Name: Bunt_Head_Idle Copy
   m_TagString: Untagged
@@ -924,6 +923,20 @@ MonoBehaviour:
     m_Extent: {x: 1.6559908, y: 1.3420205, z: 0}
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
+--- !u!114 &9196190247126558097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2713330398962607473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce6200647ffda74aa3cd4ab300447bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyingFace: {fileID: 647893516091098366, guid: 2777c87c2dd8fd6468dbac6189504e10, type: 3}
+  groundedFace: {fileID: -2474847429746752371, guid: 2777c87c2dd8fd6468dbac6189504e10, type: 3}
 --- !u!1 &3029882075598412415
 GameObject:
   m_ObjectHideFlags: 0
