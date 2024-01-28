@@ -7,13 +7,9 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rigidBody;
-    [SerializeField] private GroundTrigger _groundTrigger;
+    [SerializeField] public GroundTrigger _groundTrigger;
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
-
-    public Sprite flyingFace;
-    public Sprite groundedFace;
-    public SpriteRenderer faceRenderer;
 
     private void Awake()
     {
@@ -37,14 +33,6 @@ public class PlayerControls : MonoBehaviour
         if(_groundTrigger.IsGrounded && jumpPressed)
         {
             _rigidBody.AddForce(new Vector2(0f, _jumpForce));
-        }
-        if(_groundTrigger.IsGrounded)
-        {
-            faceRenderer.sprite = groundedFace;
-        }
-        else
-        {
-            faceRenderer.sprite = flyingFace;
         }
     }
 }
