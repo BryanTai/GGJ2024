@@ -6,7 +6,7 @@ public class RocketLauncherControls : MonoBehaviour
 
     [SerializeField] private GameObject _rocketPrefab;
     [SerializeField] private GroundTrigger _groundTrigger;
-    [SerializeField] private UIController _uiController;
+    [SerializeField] private AudioSource _audioSource;
     private Camera _camera;
     public GameObject rocketlauncherNozzle;
 
@@ -25,10 +25,10 @@ public class RocketLauncherControls : MonoBehaviour
         {
             _groundTrigger = this.transform.parent.gameObject.GetComponentInChildren<GroundTrigger>();
         }
-        
-        if(_uiController == null)
+
+        if(_audioSource == null)
         {
-            _uiController = FindObjectOfType<UIController>();
+            _audioSource = GetComponent<AudioSource>();
         }
 
         ReloadRockets();
@@ -67,6 +67,8 @@ public class RocketLauncherControls : MonoBehaviour
         {
             newRocket.LaunchRocket(rocketlauncherNozzle.transform.up);
             _ammoCount--;
+
+            _audioSource.Play();
         }
         else
         {
@@ -81,6 +83,6 @@ public class RocketLauncherControls : MonoBehaviour
 
     private void DisplayEmptyRocketsWarning()
     {
-        Debug.Log("Out of rockets!");
+        //Debug.Log("Out of rockets!");
     }
 }
