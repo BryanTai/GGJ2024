@@ -813,6 +813,9 @@ MonoBehaviour:
   _groundTrigger: {fileID: 873605621073379061}
   _speed: 3
   _jumpForce: 5000
+  flyingFace: {fileID: 647893516091098366, guid: 2777c87c2dd8fd6468dbac6189504e10, type: 3}
+  groundedFace: {fileID: -2474847429746752371, guid: 2777c87c2dd8fd6468dbac6189504e10, type: 3}
+  faceRenderer: {fileID: 5146249616020772787}
 --- !u!1 &2713330398962607473
 GameObject:
   m_ObjectHideFlags: 0

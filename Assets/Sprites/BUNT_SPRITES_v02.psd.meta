@@ -3774,6 +3774,27 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 526, y: 582}
     spritePosition: {x: 335, y: 3}
+  - name: BUNT_SPRITES_v02_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 338
+      y: 302
+      width: 343
+      height: 270
+    spriteID: 4f9769f31ea98574c96088234edae52a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 338, y: 302}
+    spritePosition: {x: 0, y: 0}
   characterData:
     bones:
     - name: bone_1

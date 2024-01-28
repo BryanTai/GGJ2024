@@ -11,6 +11,10 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
 
+    public Sprite flyingFace;
+    public Sprite groundedFace;
+    public SpriteRenderer faceRenderer;
+
     private void Awake()
     {
         if(_rigidBody == null)
@@ -33,6 +37,14 @@ public class PlayerControls : MonoBehaviour
         if(_groundTrigger.IsGrounded && jumpPressed)
         {
             _rigidBody.AddForce(new Vector2(0f, _jumpForce));
+        }
+        if(_groundTrigger.IsGrounded)
+        {
+            faceRenderer.sprite = groundedFace;
+        }
+        else
+        {
+            faceRenderer.sprite = flyingFace;
         }
     }
 }
