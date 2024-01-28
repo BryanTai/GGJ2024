@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3943618643900404894}
   - component: {fileID: 8229524068798553428}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Brick_Sprite_TOP (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7212936751398578291}
   - component: {fileID: 3700443402879628938}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Brick_Sprite_TOP (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3855460584203308901}
   - component: {fileID: 6785651685397589633}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Brick_Sprite_TOPRIGHT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4117696188011135097}
   - component: {fileID: 5881407041021947078}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Brick_Sprite_TOP (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: -1873044266421231558}
   - component: {fileID: -6141790003037113672}
   - component: {fileID: -500101538495454605}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Zone1_Platform2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2944525032046505845}
   - component: {fileID: 8576928611153553482}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Brick_Sprite_TOP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4534835249025926850}
   - component: {fileID: 3579619667587386817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Brick_Sprite_TOPLEFT
   m_TagString: Untagged
   m_Icon: {fileID: 0}

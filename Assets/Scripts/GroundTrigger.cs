@@ -6,7 +6,8 @@ using UnityEngine;
 public class GroundTrigger : MonoBehaviour
 {
     [SerializeField] private Collider2D _groundCollider;
-    [SerializeField] private PlayerControls _playerControls;
+
+    [HideInInspector] public bool IsGrounded = false;
 
     private int _groundMask;
 
@@ -15,10 +16,6 @@ public class GroundTrigger : MonoBehaviour
         if(_groundCollider == null)
         {
             _groundCollider = GetComponent<Collider2D>();
-        }
-        if(_playerControls == null)
-        {
-            Debug.LogError("MISSING PLAYER CONTROLS");
         }
 
         _groundCollider.isTrigger = true;
@@ -30,7 +27,7 @@ public class GroundTrigger : MonoBehaviour
         int layerMask = 1 << other.gameObject.layer;
         if(layerMask == _groundMask)
         {
-            _playerControls.IsGrounded = true;
+            IsGrounded = true;
         }
     }
 
@@ -39,7 +36,7 @@ public class GroundTrigger : MonoBehaviour
         int layerMask = 1 << other.gameObject.layer;
         if (layerMask == _groundMask)
         {
-            _playerControls.IsGrounded = false;
+            IsGrounded = false;
         }
     }
 }
