@@ -16,23 +16,35 @@ public class resetposition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        body.rotation = Quaternion.Lerp(body.rotation, Quaternion.Euler(new Vector3(0, 0, 90)), Time.deltaTime);
+        leftfoot.rotation = Quaternion.Lerp(body.rotation, Quaternion.Euler(new Vector3(0, 0, 180)), Time.deltaTime);
+
+        rightfoot.rotation = Quaternion.Lerp(body.rotation, Quaternion.Euler(new Vector3(0, 0, 0)), Time.deltaTime);  
         if (Input.GetKeyDown(KeyCode.R))
         {
-            print("reset pos");
-            body.SetLocalPositionAndRotation(new Vector3(transform.position.x, transform.position.y + 1, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
             //transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-            //body.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
+            //transform.position = new Vector3(0, 0, 0);
+
+            body.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
+            body.position = new Vector3(0, 0, 0);
+
+            leftfoot.rotation = Quaternion.Euler(new Vector3(0, 0, 180));
+
+            rightfoot.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+
+
+
 
             //print(leftfoot.rotation);
-            //leftfoot.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            //
             //print(leftfoot.rotation);
             //leftfoot.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            //rightfoot.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-            
+            //
+
             //rightfoot.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            
-            
-            
+            //Time.timeScale = 0;
+
+
         }
     }
 }

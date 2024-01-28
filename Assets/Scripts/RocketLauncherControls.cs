@@ -4,6 +4,7 @@ public class RocketLauncherControls : MonoBehaviour
 {
     [SerializeField] private GameObject _rocketPrefab;
     private Camera _camera;
+    public GameObject rocketlauncherNozzle;
     
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class RocketLauncherControls : MonoBehaviour
         Vector3 mousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
         Vector3 perpendicular = transform.position - mousePos;
         transform.rotation = Quaternion.LookRotation(Vector3.forward, perpendicular);
+        transform.Rotate(new Vector3(0, 0, -90));
 
         if(Input.GetButtonDown("Fire1"))
         {
@@ -30,10 +32,10 @@ public class RocketLauncherControls : MonoBehaviour
     
     private void LaunchRocket()
     {
-        GameObject newRocketGO = Instantiate(_rocketPrefab, this.transform.position, this.transform.rotation);
+        GameObject newRocketGO = Instantiate(_rocketPrefab, rocketlauncherNozzle.transform.position, rocketlauncherNozzle.transform.rotation);
         if(newRocketGO.TryGetComponent<Rocket>(out var newRocket))
         {
-            newRocket.LaunchRocket(this.transform.up);
+            newRocket.LaunchRocket(rocketlauncherNozzle.transform.up);
         }
         else
         {
