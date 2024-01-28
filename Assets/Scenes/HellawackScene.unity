@@ -135,14 +135,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bunt_Ver4
       objectReference: {fileID: 0}
-    - target: {fileID: 2999555786050255873, guid: 8378005093acbca44a6501859f202889, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.87571615
-      objectReference: {fileID: 0}
-    - target: {fileID: 3961246095594846373, guid: 8378005093acbca44a6501859f202889, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 2.1586063
-      objectReference: {fileID: 0}
     - target: {fileID: 5683260643975315133, guid: 8378005093acbca44a6501859f202889, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.16261888
@@ -182,14 +174,6 @@ PrefabInstance:
     - target: {fileID: 5683260643975315133, guid: 8378005093acbca44a6501859f202889, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6470799939855619952, guid: 8378005093acbca44a6501859f202889, type: 3}
-      propertyPath: _jumpForce
-      value: 4000
-      objectReference: {fileID: 0}
-    - target: {fileID: 7231166646318538637, guid: 8378005093acbca44a6501859f202889, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.24978623
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
