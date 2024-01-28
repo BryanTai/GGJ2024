@@ -43,11 +43,14 @@ public class Rocket : MonoBehaviour
     private void Explode()
     {
         Vector3 explosionPosition = this.transform.position;
-        Collider2D buntCollider = Physics2D.OverlapCircle(explosionPosition, _explosionRadius, LayerMask.GetMask("Bunt"));
+        Collider2D[] buntColliders = Physics2D.OverlapCircleAll(explosionPosition, _explosionRadius, LayerMask.GetMask("Bunt"));
 
-        if(buntCollider != null && buntCollider.TryGetComponent<Rigidbody2D>(out Rigidbody2D buntRigidbody))
+        foreach(Collider2D buntCollider in buntColliders)
         {
-            buntRigidbody.AddExplosionForce(_explosionPower, explosionPosition, _explosionRadius);
+            if(buntCollider != null && buntCollider.TryGetComponent<Rigidbody2D>(out Rigidbody2D buntRigidbody))
+            {
+                buntRigidbody.AddExplosionForce(_explosionPower, explosionPosition, _explosionRadius);
+            }
         }
 
         Destroy(this.gameObject);
