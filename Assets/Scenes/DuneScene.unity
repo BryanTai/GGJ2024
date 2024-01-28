@@ -902,6 +902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 591a17150e57c694ca80b134741f3f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timerController: {fileID: 489509014}
   MoveToEndTimer: 0.5
 --- !u!1001 &361105776
 PrefabInstance:
@@ -1071,6 +1072,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 875d95a8610c02a41bc483e122f13873, type: 3}
+--- !u!114 &489509014 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3006286937543375771, guid: 875d95a8610c02a41bc483e122f13873, type: 3}
+  m_PrefabInstance: {fileID: 489509013}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97102c066d3ad8d42b97cfdb32cbd1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &496438072
 PrefabInstance:
   m_ObjectHideFlags: 0

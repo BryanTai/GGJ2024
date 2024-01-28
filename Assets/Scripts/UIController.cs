@@ -3,18 +3,36 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _rocketText;
+    [SerializeField] private TextMeshProUGUI _timerText;
+
+    [HideInInspector] public float CurrentTime;
+
+    private bool _isTiming;
 
     private void Awake()
     {
-        if(_rocketText == null)
+        if(_timerText == null)
         {
-            Debug.LogError("MISSING ROCKET TEXT");
+            _timerText = GetComponentInChildren<TextMeshProUGUI>();
         }
+        _isTiming = true;
+        TimerCrossSceneInfo.FinalTime = 0f;
     }
 
-    public void SetRocketAmmo(int ammo)
+    private void Update()
     {
-        _rocketText.text = ammo.ToString();
+        if(_isTiming)
+        {
+            CurrentTime += Time.deltaTime;
+            _timerText.text = UtilityMethods.FormatTimerFromTime(CurrentTime);
+        }
+        
     }
+
+    public void StopTheTimer()
+    {
+        _isTiming = false;
+        TimerCrossSceneInfo.FinalTime = CurrentTime;
+    }
+
 }
