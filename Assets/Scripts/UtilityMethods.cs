@@ -22,4 +22,10 @@ public static class UtilityMethods
 
         rb.AddForce(Mathf.Lerp(0, explosionForce, (1 - explosionDistance)) * explosionDir, mode);
     }
+
+    public static string FormatTimerFromTime(float time)
+    {
+        System.TimeSpan ts = System.TimeSpan.FromSeconds(time);
+        return ts.ToString("mm\\:ss\\:ff");
+    }
 }

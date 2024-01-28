@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RocketLauncherControls : MonoBehaviour
 {
-    private const int TOTAL_ROCKET_AMMO = 1;
+    private const int TOTAL_ROCKET_AMMO = 4;
 
     [SerializeField] private GameObject _rocketPrefab;
     [SerializeField] private GroundTrigger _groundTrigger;
@@ -67,7 +67,6 @@ public class RocketLauncherControls : MonoBehaviour
         {
             newRocket.LaunchRocket(rocketlauncherNozzle.transform.up);
             _ammoCount--;
-            _uiController.SetRocketAmmo(_ammoCount);
         }
         else
         {
@@ -78,7 +77,6 @@ public class RocketLauncherControls : MonoBehaviour
     private void ReloadRockets()
     {
         _ammoCount = TOTAL_ROCKET_AMMO;
-        _uiController.SetRocketAmmo(_ammoCount);
     }
 
     private void DisplayEmptyRocketsWarning()

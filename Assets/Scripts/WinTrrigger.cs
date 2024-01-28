@@ -7,24 +7,25 @@ using UnityEngine.SceneManagement;
 public class WinTrrigger : MonoBehaviour
 {
 
+    [SerializeField] private UIController _timerController;
+
     public float MoveToEndTimer = 3f;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(_timerController != null)
+        {
+            _timerController = FindObjectOfType<UIController>();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
+        {
+            _timerController.StopTheTimer();
             StartCoroutine(MoveToEndScreen());
+        }
     }
 
     private IEnumerator MoveToEndScreen() 
