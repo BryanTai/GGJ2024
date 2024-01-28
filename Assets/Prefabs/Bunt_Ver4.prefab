@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 103005148234269530}
   - component: {fileID: 777131747982441339}
   - component: {fileID: 8700360738910891808}
+  - component: {fileID: 1748697514558454859}
   m_Layer: 6
   m_Name: bone_7
   m_TagString: Untagged
@@ -339,7 +340,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 3638003159131075121}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 3
+  m_BreakAction: 0
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 1.2404872, y: -0.75669855}
@@ -347,7 +348,7 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: -20
     m_UpperAngle: 20
@@ -367,6 +368,19 @@ MonoBehaviour:
   _groundTrigger: {fileID: 0}
   _uiController: {fileID: 0}
   rocketlauncherNozzle: {fileID: 1253426496045633973}
+--- !u!114 &1748697514558454859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968350826678967571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a156faf7f0c7394b81a645caf023b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerPt: {fileID: 2654026581985660585}
 --- !u!1 &1253426496045633973
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +548,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5683260643975315133}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2108202331254735014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2654026581985660585}
+  m_Layer: 6
+  m_Name: armanchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2654026581985660585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108202331254735014}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.2, y: -0.84, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5683260643975315133}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2172637619923878187
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +732,7 @@ Transform:
   - {fileID: 2709046033588373942}
   - {fileID: 5367978399891784541}
   - {fileID: 3713468595382403207}
+  - {fileID: 2654026581985660585}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!50 &3638003159131075121
