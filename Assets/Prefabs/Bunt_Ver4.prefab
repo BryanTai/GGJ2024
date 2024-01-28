@@ -219,7 +219,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 2.1586068, y: 0.0000005984336}
+  m_ConnectedAnchor: {x: 2.1586063, y: 0.0000005984336}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -761,8 +761,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidBody: {fileID: 3638003159131075121}
+  _collider: {fileID: 2188156574057418607}
   _speed: 3
-  _jumpForce: 400
+  _jumpForce: 4000
 --- !u!1 &2713330398962607473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,7 +1225,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.3076833, y: 0.8757161}
+  m_ConnectedAnchor: {x: 1.3076833, y: 0.87571615}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1797,7 +1798,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.12972854, y: 0.24978617}
+  m_ConnectedAnchor: {x: -0.12972854, y: 0.24978623}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

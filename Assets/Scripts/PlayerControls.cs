@@ -38,28 +38,31 @@ public class PlayerControls : MonoBehaviour
 
         _rigidBody.velocity = new Vector2 (moveHorizontal * _speed, _rigidBody.velocity.y);
         
-        if(_isGrounded && jumpPressed)
+        //if(_isGrounded && jumpPressed)
+        if(jumpPressed)
         {
             _rigidBody.AddForce(new Vector2(0f, _jumpForce));
-            _isGrounded = false;
+            //_isGrounded = false;
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        int layerMask = 1 << col.gameObject.layer; 
-        if(layerMask == _groundMask)
-        {
-            _isGrounded = true;
-        }
-    }
+    // private void OnCollisionEnter2D(Collision2D col)
+    // {
+    //     Collider2D bodyPartCollided = col.GetContact(0).collider;
 
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        int layerMask = 1 << other.gameObject.layer;
-        if (layerMask == _groundMask)
-        {
-            _isGrounded = false;
-        }
-    }
+    //     int layerMask = 1 << col.gameObject.layer; 
+    //     if(layerMask == _groundMask)
+    //     {
+    //         _isGrounded = true;
+    //     }
+    // }
+
+    // private void OnCollisionExit2D(Collision2D other)
+    // {
+    //     int layerMask = 1 << other.gameObject.layer;
+    //     if (layerMask == _groundMask)
+    //     {
+    //         _isGrounded = false;
+    //     }
+    // }
 }

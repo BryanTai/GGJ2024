@@ -55,9 +55,7 @@ public class Rocket : MonoBehaviour
             Rigidbody2D buntRigidbody = buntCollider.GetComponent<Rigidbody2D>();
             buntRigidbody.AddExplosionForce(_explosionPower, explosionPosition, _explosionRadius);
         }
-        
 
-        Debug.Log("KABOOM!");
         Destroy(this.gameObject);
     }
 }
