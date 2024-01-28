@@ -37,22 +37,16 @@ public class Rocket : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        //TODO: When rocket hits a platform, explode
-
         Explode();
     }
 
-    
-
     private void Explode()
     {
-
         Vector3 explosionPosition = this.transform.position;
         Collider2D buntCollider = Physics2D.OverlapCircle(explosionPosition, _explosionRadius, LayerMask.GetMask("Bunt"));
 
-        if(buntCollider != null)
+        if(buntCollider != null && buntCollider.TryGetComponent<Rigidbody2D>(out Rigidbody2D buntRigidbody))
         {
-            Rigidbody2D buntRigidbody = buntCollider.GetComponent<Rigidbody2D>();
             buntRigidbody.AddExplosionForce(_explosionPower, explosionPosition, _explosionRadius);
         }
 
