@@ -7,16 +7,19 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rigidBody;
+    [SerializeField] private GroundTrigger _groundTrigger;
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
-
-    [HideInInspector] public bool IsGrounded = false;
 
     private void Awake()
     {
         if(_rigidBody == null)
         {
             _rigidBody = GetComponent<Rigidbody2D>();
+        }
+        if(_groundTrigger == null)
+        {
+            _groundTrigger = GetComponentInChildren<GroundTrigger>();
         }
     }
 
@@ -27,10 +30,9 @@ public class PlayerControls : MonoBehaviour
 
         _rigidBody.velocity = new Vector2 (moveHorizontal * _speed, _rigidBody.velocity.y);
         
-        if(IsGrounded && jumpPressed)
+        if(_groundTrigger.IsGrounded && jumpPressed)
         {
             _rigidBody.AddForce(new Vector2(0f, _jumpForce));
-            IsGrounded = false;
         }
     }
 }
