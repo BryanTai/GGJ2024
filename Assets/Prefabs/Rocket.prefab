@@ -105,6 +105,7 @@ MonoBehaviour:
   _explosionRadius: 7
   _explosionPower: 200
   _rigidBody: {fileID: 2479793887445600524}
+  explosion: {fileID: 3612440883047187099, guid: fa12b6a51ad441945895a9593a91878d, type: 3}
 --- !u!61 &242821063851444028
 BoxCollider2D:
   m_ObjectHideFlags: 0
