@@ -342,7 +342,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.2404876, y: -0.75669855}
+  m_ConnectedAnchor: {x: 1.2404872, y: -0.75669855}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -364,6 +364,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rocketPrefab: {fileID: 5768335455746830219, guid: 68c71787aa4186648b91734c803bb3e2, type: 3}
+  _groundTrigger: {fileID: 0}
+  _uiController: {fileID: 0}
   rocketlauncherNozzle: {fileID: 1253426496045633973}
 --- !u!1 &1253426496045633973
 GameObject:
@@ -762,9 +764,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidBody: {fileID: 3638003159131075121}
+  _groundTrigger: {fileID: 873605621073379061}
   _speed: 3
-  _jumpForce: 4000
-  IsGrounded: 0
+  _jumpForce: 5000
 --- !u!1 &2713330398962607473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,7 +1228,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.3076833, y: 0.87571615}
+  m_ConnectedAnchor: {x: 1.307683, y: 0.87571615}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1452,7 +1454,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.9619957, y: 0.49926677}
+  m_ConnectedAnchor: {x: 1.9619962, y: 0.49926677}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1657,7 +1659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _groundCollider: {fileID: 4215115096400827575}
-  _playerControls: {fileID: 6470799939855619952}
+  IsGrounded: 0
 --- !u!1 &7986830586027091310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,7 +1893,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.12972854, y: 0.24978623}
+  m_ConnectedAnchor: {x: -0.12972894, y: 0.24978627}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2012,7 +2014,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.20990369, y: -0.2568425}
+  m_ConnectedAnchor: {x: -0.20990328, y: -0.2568425}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
