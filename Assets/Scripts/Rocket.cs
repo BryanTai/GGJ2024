@@ -11,6 +11,8 @@ public class Rocket : MonoBehaviour
 
     private float _secondsAlive;
 
+    public GameObject explosion;
+
     private void Awake()
     {
         if(_rigidBody == null)
@@ -52,7 +54,7 @@ public class Rocket : MonoBehaviour
                 buntRigidbody.AddExplosionForce(_explosionPower, explosionPosition, _explosionRadius);
             }
         }
-
+        Instantiate(explosion, transform.position, transform.rotation);
         Destroy(this.gameObject);
     }
 }
