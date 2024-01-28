@@ -3781,10 +3781,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 338
-      y: 302
-      width: 343
-      height: 270
+      x: 345
+      y: 305
+      width: 332
+      height: 269
     spriteID: 4f9769f31ea98574c96088234edae52a
     spriteBone: []
     spriteOutline: []
@@ -3793,7 +3793,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 338, y: 302}
+    uvTransform: {x: 345, y: 305}
     spritePosition: {x: 0, y: 0}
   characterData:
     bones:
