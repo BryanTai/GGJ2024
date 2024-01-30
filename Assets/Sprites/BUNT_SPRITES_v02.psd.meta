@@ -2141,8 +2141,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 5
       y: 4
-      width: 284
-      height: 506
+      width: 500
+      height: 296
     spriteID: 7786cb590a08dd049871bf3c1de35596
     spriteBone:
     - name: bone_7

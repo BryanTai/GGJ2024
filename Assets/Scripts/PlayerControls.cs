@@ -10,6 +10,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] public GroundTrigger _groundTrigger;
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
+    [SerializeField] private float _torqueForce;
     [SerializeField] private float _verticalSpeedLimitForJump;
 
     private void Awake()
@@ -31,11 +32,21 @@ public class PlayerControls : MonoBehaviour
 
         _rigidBody.velocity = new Vector2 (moveHorizontal * _speed, _rigidBody.velocity.y);
 
+        if (_rigidBody.angularVelocity < -20)
+        {
+            //turn CCW
+            _rigidBody.AddTorque(_torqueForce);
+        }
+        if (_rigidBody.angularVelocity > 20)
+        {
+            _rigidBody.AddTorque(-_torqueForce);
+        }
+
         bool isYVelocitySlow = Mathf.Abs(_rigidBody.velocity.y) < _verticalSpeedLimitForJump;
         
         if(_groundTrigger.IsGrounded && jumpPressed && isYVelocitySlow)
         {
-            _rigidBody.AddForce(new Vector2(0f, _jumpForce));
+            _rigidBody.AddForce(new Vector2(0f, _jumpForce), ForceMode2D.Impulse);
         }
     }
 }

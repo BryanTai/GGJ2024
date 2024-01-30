@@ -6,8 +6,10 @@ using UnityEngine;
 public class GroundTrigger : MonoBehaviour
 {
     [SerializeField] private Collider2D _groundCollider;
+    [SerializeField] private Rigidbody2D _playerRigidbody;
+    [SerializeField] private float _verticalSpeedLimitForGrounded;
 
-    [HideInInspector] public bool IsGrounded = false;
+    public bool IsGrounded = false;
 
     private int _groundMask;
 
@@ -18,6 +20,11 @@ public class GroundTrigger : MonoBehaviour
             _groundCollider = GetComponent<Collider2D>();
         }
 
+        if(_playerRigidbody == null)
+        {
+            _playerRigidbody = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        }
+
         _groundCollider.isTrigger = true;
         _groundMask = LayerMask.GetMask("Platform");
     }
@@ -25,7 +32,8 @@ public class GroundTrigger : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         int layerMask = 1 << other.gameObject.layer;
-        if(layerMask == _groundMask)
+        bool isYVelocitySlow = Mathf.Abs(_playerRigidbody.velocity.y) < _verticalSpeedLimitForGrounded;
+        if (layerMask == _groundMask && isYVelocitySlow)
         {
             IsGrounded = true;
         }

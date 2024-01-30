@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RocketLauncherControls : MonoBehaviour
 {
-    private const int TOTAL_ROCKET_AMMO = 4;
+    [SerializeField] private int TOTAL_ROCKET_AMMO = 4;
 
     [SerializeField] private GameObject _rocketPrefab;
     [SerializeField] private GroundTrigger _groundTrigger;

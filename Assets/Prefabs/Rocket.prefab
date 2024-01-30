@@ -103,7 +103,7 @@ MonoBehaviour:
   _rocketSpeed: 800
   _secondsToLive: 3
   _explosionRadius: 7
-  _explosionPower: 200
+  _explosionPower: 150
   _rigidBody: {fileID: 2479793887445600524}
   explosion: {fileID: 3612440883047187099, guid: fa12b6a51ad441945895a9593a91878d, type: 3}
 --- !u!61 &242821063851444028

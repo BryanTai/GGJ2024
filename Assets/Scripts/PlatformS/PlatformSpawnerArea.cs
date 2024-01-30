@@ -4,18 +4,16 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class PlatformSpawner : MonoBehaviour
+public class PlatformSpawnerArea : MonoBehaviour
 {
     [SerializeField] private GameObject[] platformPrefabs;
-    [SerializeField, Range(0f, 1f)] private float chanceToMove;
-    [Space]
-    [SerializeField] private float minMoveSpeed = 2;
-    [SerializeField] private float maxMoveSpeed = 8;
-    [Space]
-    [SerializeField] private float minLength = 2;
-    [SerializeField] private float maxLength = 8;
 
-    private SpriteRenderer sprite;
+    [SerializeField] private SpriteRenderer sprite;
+
+    public float Heigth
+    {
+        get { return sprite.bounds.size.y; }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -31,15 +29,9 @@ public class PlatformSpawner : MonoBehaviour
 
         var index = Random.Range(0, platformPrefabs.Length);
 
-        var platform = Instantiate(platformPrefabs[index], spawnPostion, Quaternion.identity);
+        Instantiate(platformPrefabs[index], spawnPostion, Quaternion.identity).transform.SetParent(this.transform);
+        
 
-        var mover = platform.GetComponent<PlatformMover>();
-        mover.SetSpeed(Random.Range(minMoveSpeed, maxMoveSpeed));
-
-        if(Random.Range(0f, 1f) < chanceToMove)
-        {
-            mover.isActive = true;
-        }
 
         //var scaler = platform.GetComponent<PlatformScaler>();
         //scaler.SetScale(Random.Range(minLength, maxLength));

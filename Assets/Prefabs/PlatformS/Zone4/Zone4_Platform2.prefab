@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 87b403375d9a5544c922db5d4b0cd69b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7d1c92ddb249b94b8317b466043ab18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 87b403375d9a5544c922db5d4b0cd69b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7d1c92ddb249b94b8317b466043ab18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -241,7 +241,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b9bc3cc497c881849870a64f6bedffc9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 409faa01a8f786a47be59365a13eadfa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -325,7 +325,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 87b403375d9a5544c922db5d4b0cd69b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7d1c92ddb249b94b8317b466043ab18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -433,12 +433,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 6.061858
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d4c47f88b6ad1024da60a752b701b60d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -461,8 +461,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3004f52f526c5ed4b9c599f01fbea41d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chanceToMove: 0.4
   moveSpeed: 5
-  isActive: 0
+  moveVariation: 2
 --- !u!251 &-500101538495454605
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -481,7 +482,7 @@ PlatformEffector2D:
   m_SurfaceArc: 180
   m_UseSideFriction: 0
   m_UseSideBounce: 0
-  m_SideArc: 1
+  m_SideArc: 0
 --- !u!1 &8425831525718942504
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +556,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 87b403375d9a5544c922db5d4b0cd69b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7d1c92ddb249b94b8317b466043ab18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -639,7 +640,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8d29b1c1b47223e4396e52a0e2bfcfd6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c096540155fae294d872d7454ae7add0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
