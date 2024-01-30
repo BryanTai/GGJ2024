@@ -783,7 +783,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1dc6a9b0c85b61646acf824299b2d325, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9163ee8f063b4fb4b93422ad20df9ba7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
@@ -1991,10 +1991,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2019372434}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.0315, y: -1.7866}
-  m_SizeDelta: {x: 367.937, y: 367.5731}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 17.5, y: -17.5}
+  m_SizeDelta: {x: -35, y: -35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2075758481
 MonoBehaviour:
@@ -2018,7 +2018,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Bouncy2D - Art, Animation\r\nhttps://linktr.ee/bouncy2d\n\nHavlark - Programming,
     Rigging\r\n\rhttps://twitter.com/Havlark/\n\nHellawack (BryanTai) - Programming\r\n\rhttps://linktr.ee/thatguybryantai\n\nHunter-of-Dune
-    - Programming, Level Design\nhttps://hunter-of-dune.itch.io/\n"
+    - Programming, Level Design\nhttps://hunter-of-dune.itch.io/\n\nMarcStraight
+    - Music\nhttps://linktr.ee/marcstraight\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
